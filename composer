@@ -1,0 +1,3 @@
+# ignorer les recommendations
+composer update --ignore-platform-reqs --no-dev
+composer install --ignore-platform-reqs
