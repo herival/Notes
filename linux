@@ -16,3 +16,14 @@ WantedBy=multi-user.target
 *****************/
 sudo systemctl enable xampp.service
 sudo systemctl status xampp-service
+
+access phpmyadmin distant
+# since XAMPP 1.4.3
+<Directory "/opt/lampp/phpmyadmin">
+    AllowOverride AuthConfig Limit
+    Require all granted
+    Order allow,deny
+    Allow from all
+    #Require local
+    #ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+</Directory>
