@@ -18,6 +18,7 @@ sudo systemctl enable xampp.service
 sudo systemctl status xampp-service
 
 access phpmyadmin distant
+ sudo nano /opt/lampp/etc/extra/httpd-xampp.conf
 # since XAMPP 1.4.3
 <Directory "/opt/lampp/phpmyadmin">
     AllowOverride AuthConfig Limit
