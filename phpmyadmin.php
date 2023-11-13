@@ -1,3 +1,4 @@
+<?php 
 # Secure phpmyadmin
 # config.inc.php
 
@@ -11,7 +12,7 @@ $cfg['Servers'][$i]['AllowRoot'] = FALSE;
 //$cfg['Servers'][$i]['host'] = 'localhost';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = false;
-***********************/
+/*********************** 
 
 #add password root user
 update user set password=PASSWORD('NEW PASSWORD') where user='root';
