@@ -21,10 +21,9 @@ Alias /phpmyadmin "/opt/lampp/suivi"
     Allow from all
 </Directory>
 
-
-
-
+#creer le dossier 
 cd /opt/lampp
 sudo mkdir suivi
 cd /opt/lampp/suivi
 
+sudo /opt/lampp/lampp restart
