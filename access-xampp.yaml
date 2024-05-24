@@ -1,0 +1,30 @@
+Pi3.14159265358!2024$
+
+sudo nano /opt/lampp/apache2/conf/httpd.conf
+#ajouter le dossier
+<Directory "/opt/lampp/suivi">
+    Options Indexes FollowSymLinks
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+</Directory>
+
+#ajouter le dossier dans httpd-xampp.conf
+sudo nano /opt/lampp/etc/extra/httpd-xampp.conf
+
+Alias /phpmyadmin "/opt/lampp/suivi"
+
+<Directory "/opt/lampp/suivi">
+    AllowOverride AuthConfig Limit
+    Require all granted
+    Order allow,deny
+    Allow from all
+</Directory>
+
+
+
+
+cd /opt/lampp
+sudo mkdir suivi
+cd /opt/lampp/suivi
+
