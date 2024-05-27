@@ -13,7 +13,7 @@ Type=forking
 [Install]
 WantedBy=multi-user.target
 
-*****************/
+*****************\
 sudo systemctl enable xampp.service
 sudo systemctl status xampp-service
 
@@ -28,3 +28,26 @@ access phpmyadmin distant
     #Require local
     #ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
 </Directory>
+
+
+sudo /opt/lampp/lampp start
+
+cd /opt/lampp/test
+sudo mkdir /opt/lampp/test
+sudo mkdir /opt/lampp/test/test
+sudo mkdir /opt/lampp/test/test/public
+
+
+sudo cp /home/herival/index/index.html /opt/lampp/test
+sudo cp /home/herival/index/.htaccess /opt/lampp/test
+sudo mv /opt/lampp/test/index.html /opt/lampp/test/test/public
+
+sudo rm /opt/lampp/test/test/public
+sudo cp /home/herival/index/index.html /opt/lampp/test/test/public
+
+sudo cp /home/herival/grafikart.zip /opt/lampp/test
+sudo unzip /opt/lampp/test/grafikart.zip /opt/lampp/test
+cd /opt/lampp/test
+sudo unzip grafikart.zip
+
+sudo chmod 777 -R /opt/lampp/test/grafikart/var

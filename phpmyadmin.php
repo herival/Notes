@@ -30,3 +30,27 @@ GRANT ALL PRIVILEGES ON * . * TO 'user_admin'@'localhost';
 FLUSH PRIVILEGES;
 
 sudo /opt/lampp/lampp restart
+
+
+access phpmyadmin
+
+sudo nano /opt/lampp/apache2/conf/httpd.conf 
+
+#Ajouter la ligne
+<Directory "opt/lampp/phpmyadmin">
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+</Directory>
+
+#dans httpd-xampp.conf
+sudo nano /opt/lampp/etc/extra/httpd-xampp.conf 
+
+<Directory "opt/lampp/phpmyadmin">
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+</Directory>
+
+#redemarrer lampp
+sudo /opt/lampp/lampp restart

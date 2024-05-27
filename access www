@@ -1,0 +1,30 @@
+#access autres dossier sur le meme serveur
+
+/home/herival/index
+
+
+#Ajouter la ligne dans httpd.conf
+sudo nano /opt/lampp/apache2/conf/httpd.conf 
+
+<Directory "home/herival/index">
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+</Directory>
+
+#dans httpd-xampp.conf
+sudo nano /opt/lampp/etc/extra/httpd-xampp.conf 
+
+Alias /index "/home/herival/index"
+
+<Directory "home/herival/index">
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+</Directory>
+
+#redemarrer lampp
+sudo /opt/lampp/lampp restart
+
+#changer l'acces au repertoir dev
+sudo chmod 777 -R /opt/lampp/lampp/

@@ -1,0 +1,4 @@
+Problème xampp 
+'FEEDBACK' is disabled.
+
+Copy all content of C:\xampp\mysql\backup to the C:\xampp\mysql\data to fix the issue.
