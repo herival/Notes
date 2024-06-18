@@ -28,3 +28,7 @@ sudo /opt/lampp/lampp restart
 
 #changer l'acces au repertoir dev
 sudo chmod 777 -R /opt/lampp/lampp/
+
+windows11 desactiver creation user offline
+shift + F10
+Dans la commande tapez : OOBE\BYPASSNRO
